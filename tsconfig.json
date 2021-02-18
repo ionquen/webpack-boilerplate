@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "jsx": "react",
+        "module": "esnext",
+        "noEmitOnError": true,
+        "noUnusedLocals": true,
+        "removeComments": true,
+        "noImplicitAny": true,
+        "allowJs": true,
+        "esModuleInterop": true,
+        "baseUrl": "./",
+        "paths": {
+            "Components/*": ["src/components/*"],
+            "Styl/*": ["src/styl/*"],
+            "Img/*": ["src/img/*"],
+        }
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}

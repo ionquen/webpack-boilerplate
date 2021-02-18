@@ -1,0 +1,8 @@
+{
+  "short_name": "React boilerplate",
+  "name": "React boilerplate",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "black",
+  "background-color": "black"
+}
