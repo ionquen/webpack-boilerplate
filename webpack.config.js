@@ -36,7 +36,7 @@ module.exports = (env, argv) => {
             historyApiFallback: true,
         },
         resolve: {
-            extensions: [".ts", ".tsx", ".js", ".jsx"],
+            extensions: [".js", ".jsx"],
             alias: {
                 Components: path.resolve(__dirname, 'src/components/'),
                 Styl: path.resolve(__dirname, 'src/styl/'),
@@ -46,9 +46,9 @@ module.exports = (env, argv) => {
         module: {
             rules: [
                 {
-                    test: /\.ts(x?)$/,
+                    test: /\.js(x?)$/,
                     exclude: /node_modules/,
-                    use: ["ts-loader"],
+                    use: ["babel-loader"],
                 },
                 {
                     test: /\.styl$/,
@@ -57,7 +57,6 @@ module.exports = (env, argv) => {
                         {
                             loader: "style-loader",
                         },
-                        "css-modules-typescript-loader",
                         {
                             loader: "css-loader",
                             options: { modules: true }
@@ -70,7 +69,7 @@ module.exports = (env, argv) => {
             ]
         },
         entry: {
-            main: './src/index.tsx',
+            main: './src/index.js',
         },
         output: {
             filename: (argv.liveReload || false) ? 'assets/[name].[hash].js' : 'assets/[name].[chunkhash].js',
